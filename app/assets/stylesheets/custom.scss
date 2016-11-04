@@ -4,6 +4,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.fa {
+  margin-right: 10px;
+}
+
 header {
   background-color: #539942;
   color: #fff;
@@ -16,6 +20,19 @@ footer {
   padding: 38px 0 0 0;
   font-size: 16px;
   line-height: 22px;
+
+  p {
+    padding: 0 0 10px
+  }
+}
+
+.footer-seperator {
+  background-color: #ffffff;
+  height: 3px;
+  margin-top: 10px;
+  margin-bottom 20px;
+  text-align: center;
+  width: 100px;
 }
 
 .footer-copyright {
