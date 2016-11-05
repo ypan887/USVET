@@ -11,8 +11,14 @@
       </div>
       <div class="col-md-6 col-sm-12">
         <div class="header-contact">
-          <span><%= fa_icon "envelope", text: "admin@usvetstar.org" %></span> 
-          <span><%= fa_icon "globe", text: "www.usvetstar.org" %></span>
+          <span>
+            <%= fa_icon "envelope" %>
+            <%= mail_to "admin@usvetstar.org" %>
+          </span> 
+          <span>
+            <%= fa_icon "globe" %>
+            <%= link_to "www.usvetstar.org" %>
+          </span>
           <div class="header-shared-menu">
             <%= render "shared/shared_menu" %>
           </div>
