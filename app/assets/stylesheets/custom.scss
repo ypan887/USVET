@@ -4,6 +4,26 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: #666;
+  text-shadow: 0 0 1px rgba(0,0,0,0.01);
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+.content {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  line-height: 2;
+}
+
+.center {
+  text-align: center;
+}
+
 .fa {
   width: 1.2rem;
 }
@@ -40,7 +60,6 @@ footer {
   font-size: 16px;
   line-height: 22px;
 
-  position: absolute;
   bottom: 0px;
   left: 0px;
   right: 0px;
@@ -78,6 +97,7 @@ footer {
   float: right;
 }
 
+/* social menu */
 .social li {
   font-size: 18px;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.6);
