@@ -12,7 +12,14 @@
     <%= render "shared/header" %>
     <%= render "shared/nav" %>
     <div class="container content">
-      <%= yield %>
+      <div class="row">
+        <div class="col-md-8">
+          <%= yield %>
+        </div>
+        <div class="col-md-4">
+          <%= render "shared/side_bar" %>
+        </div>
+      </div>
     </div>
     <%= render "shared/footer" %>
   </body>

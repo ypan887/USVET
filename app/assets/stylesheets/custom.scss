@@ -97,6 +97,33 @@ footer {
   float: right;
 }
 
+/* side bar */
+.sidebar {
+
+}
+
+.sidebar-widget {
+  border-left: 3px solid #539942;
+  border-right: 3px solid #539942;
+  border-bottom: 3px solid #539942;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0,0,0,.7);
+  padding: 0px 20px 15px 20px;
+}
+
+.sidebar-widget-title {
+  background: #539942;
+  margin-bottom: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-align: center;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 /* social menu */
 .social li {
   font-size: 18px;
