@@ -1,0 +1,23 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <%= link_to image_tag("logo.png", border: 0), 
+                    root_path, 
+                    class: 'logo'
+        %>
+        <p>Education and assistance for Veterans, their dependents, and survivors.
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="header-contact">
+          <span><%= fa_icon "envelope", text: "admin@usvetstar.org" %></span> 
+          <span><%= fa_icon "globe", text: "www.usvetstar.org" %></span>
+          <div class="header-shared-menu">
+            <%= render "shared/shared_menu" %>
+          </div>
+        </div>
+        
+      </div>
+  </div>
+</header>
