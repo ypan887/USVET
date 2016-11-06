@@ -16,6 +16,9 @@ gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
+gem 'ckeditor'
+gem 'paperclip'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
