@@ -11,7 +11,7 @@ ActiveAdmin.register Post do
     actions
   end
 
-  filter :user_name
+  filter :user_name, :as => :select, :collection => AdminUser.all.map{|u| [u.user_name, u.id]}
   filter :title
   filter :content
   filter :created_at
