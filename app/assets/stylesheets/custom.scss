@@ -1,0 +1,241 @@
+body {
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: #666;
+  text-shadow: 0 0 1px rgba(0,0,0,0.01);
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+a {
+  color: #428bca;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  } 
+}
+
+.content {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  line-height: 2;
+}
+
+.center {
+  text-align: center;
+}
+
+.fa {
+  width: 1.2rem;
+}
+
+/* header */
+header {
+  background-color: #539942;
+  color: #fff;
+  font-size: 16px;
+}
+
+.header-contact {
+  display: block;
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-left: 0;
+  font-size: 18px;
+
+  span {
+    padding-left: 10px;
+  }
+
+  a {
+    margin-left: 5px;
+    color: #fff;
+
+    &:hover{
+      color: #e4abab;
+    }
+  }
+}
+
+.header-shared-menu {
+  margin-top: 1em;
+}
+
+/* footer */
+footer {
+  background: #34495e;
+  color: #ffffff;
+  text-shadow: 0px 1px 2px #2a2a2a;
+  font-size: 16px;
+  line-height: 22px;
+
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+  padding: 38px 0 0 0;
+
+  p {
+    padding: 0 0 10px
+  }
+  
+  a {
+    color: #fff;
+
+    &:hover{
+      color: #e4abab;
+    }
+  }
+}
+
+.footer-seperator {
+  background-color: #ffffff;
+  height: 3px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100px;
+}
+
+.footer-copyright {
+  background-color: #539942;
+  color: #fff;
+  padding: 10px 0 0px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.footer-copyright-text{
+  float: left;
+  padding: 10px;
+}
+
+.footer-shared-menu {
+  float: right;
+}
+
+/* side bar */
+.sidebar {
+
+}
+
+.sidebar-widget {
+  border-left: 3px solid #539942;
+  border-right: 3px solid #539942;
+  border-bottom: 3px solid #539942;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0,0,0,.7);
+  padding: 0px 20px 15px 20px;
+}
+
+.sidebar-widget-title {
+  background: #539942;
+  margin-bottom: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-align: center;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* social menu */
+.social li {
+  font-size: 18px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.6);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.6);
+  display: inline-block;
+  height: 35px;
+  margin-right: 5px;
+  width: 35px;
+  text-align: center;
+  -webkit-transition: background .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out;
+  -o-transition: background .5s ease-in-out;
+  -ms-transition: background .5s ease-in-out;
+  transition: background .5s ease-in-out;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+
+  i {
+    color: #fff;
+    line-height: 30px;
+  }
+}
+
+/* facebook */
+.social li.facebook{
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, transparent 50%, #4C66A4 50%);
+}
+.social li.facebook:hover{
+  background-position: 0 -100%;
+  background-color:#4C66A4;
+}
+
+/* twitter */
+.social li.twitter{
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, transparent 50%, #f60 50%);
+}
+
+.social li.twitter:hover{
+  background-position: 0 -100%;
+  background-color:#f60;
+}
+
+/* linkedin */
+.social li.linkedin{
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, transparent 50%, #069 50%);
+}
+
+.social li.linkedin:hover{
+  background-position: 0 -100%;
+  background-color:#069;
+}
+
+/* youtube */
+.social li.youtube{
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, transparent 50%, #C92228 50%);
+}
+
+.social li.youtube:hover{
+  background-position: 0 -100%;
+  background-color:#C92228;
+}
+
+/* google plus*/
+.social li.Googleplus {
+  background-image: linear-gradient(to bottom,transparent 50%, #d34836 50%);
+  background-size: 100% 200%;
+}
+
+.social li.Googleplus:hover {
+  background-color:#d34836;
+  background-position: 0 -100%;
+}
+
+/* instagram */
+.social li.instagram {
+  background-image: linear-gradient(to bottom,transparent 50%,  #3f729b 50%);
+  background-size: 100% 200%;
+}
+
+.social li.instagram:hover {
+background-color: #3f729b;
+background-position: 0 -100%;
+}
