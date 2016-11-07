@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   root "home#index"
+  resources :posts, only: :show
 
   get '/learn_about', to: 'home#learn_about'
   get '/volunteer', to: 'home#volunteer'

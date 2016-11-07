@@ -239,3 +239,45 @@ footer {
 background-color: #3f729b;
 background-position: 0 -100%;
 }
+
+/* posts */
+.post-info {
+  list-style: none;
+  float: left;
+  padding: 0px;
+  transition: all 0.4s ease 0s;
+  background: #539942 !important;
+  color: #ffffff;
+
+  li {
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+  }
+}
+
+.post-day {
+  font-size: 68px;
+  line-height: 55px;
+}
+
+.post-month {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.post-content {
+  float: left;
+  width: 86%;
+  padding-left: 20px;
+
+  h2 {
+    color: #539942; 
+  }
+}

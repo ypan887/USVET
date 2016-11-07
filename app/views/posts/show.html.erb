@@ -1,0 +1,14 @@
+<div>
+  <ul class="post-info">
+    <li>
+      <span class="post-day"><%= @post.created_at.day %></span>
+      <h6 class="post-month">
+        <%= "#{@post.created_at.strftime('%b %y')}" %>
+      </h6>
+    </li>
+  </ul>
+  <div class="post-content">
+    <h2><%= @post.title %></h2>
+    <div><%= @post.content.html_safe %></div>
+  </div>
+</div>
