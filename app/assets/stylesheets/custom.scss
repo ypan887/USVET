@@ -151,6 +151,28 @@ footer {
   padding-bottom: 10px;
 }
 
+.sidebar-widget-content {
+  list-style: none;
+  font-size: 17px;
+  line-height: 20px;
+  
+  li {
+    margin-bottom: 10px;
+  }
+
+  li:before {
+    content: "\f105"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+  }
+
+  a {
+    color: #777777;
+  }
+}
+
 /* social menu */
 .social li {
   font-size: 18px;
