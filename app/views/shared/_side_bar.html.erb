@@ -1,6 +1,6 @@
 <div class="sidebar-widget">
   <h2 class= "sidebar-widget-title">Recent Posts</h2>
-  <% @recent_posts = Post.recent_posts %>
+  <% @recent_posts ||= Post.recent_posts %>
   <ul class= "sidebar-widget-content">
     <% @recent_posts.each do |p| %>
       <li><%= link_to p.title, post_path(p) %></li>
@@ -14,4 +14,17 @@
 
 <div class="sidebar-widget">
   <h2 class= "sidebar-widget-title">Archives</h2>
+  <% @archives ||= Post.archives %>
+  <ul class= "sidebar-widget-content">
+    <% @archives.each do |k, v| %>
+      <li data-toggle="collapse", data-target="#<%= k %>">
+        <%= k %>
+      </li>
+      <ul class="collapse" id="<%= k %>">
+        <% v.each do |p| %>
+          <li><%= link_to p.title, post_path(p) %></li>
+        <% end %>
+      </ul>
+    <% end %> 
+  </ul>
 </div>
