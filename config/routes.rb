@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get '/learn_about', to: 'home#learn_about'
   get '/volunteer', to: 'home#volunteer'
   get '/donation', to: 'home#donation'
+  get '/subscribe', to: 'emailapi#index'
+  post 'emailapi/subscribe', to: 'emailapi#subscribe'
 end

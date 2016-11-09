@@ -7,6 +7,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
+gem "figaro"
 
 gem 'bootstrap', '~> 4.0.0.alpha5'
 gem "font-awesome-rails"
@@ -17,6 +18,8 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem 'ckeditor'
 gem 'paperclip'
+
+gem 'gibbon'
 
 group :production do
   gem 'pg'

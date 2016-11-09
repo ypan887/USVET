@@ -1,0 +1,13 @@
+<h1>Get My Awesome News Letter</h1>
+<p>Keep me updated with vetern beneifts</p>
+<% if flash[:error] %>
+  <div class="alert bg-danger text-white">
+    <%= flash[:error] %>
+  </div>
+<% end %>
+<%= form_tag('/emailapi/subscribe', method: "post", id: "subscribe", remote: "true") do -%>
+   <%= email_field_tag(:email_address, nil, {id: "email", placeholder: "email address"}) %>
+   <%= text_field_tag(:first_name, nil, {id: "first_name", placeholder: "first_name"}) %>
+   <%= text_field_tag(:last_name, nil, {id: "last_name", placeholder: "last_name"}) %>
+   <%= submit_tag("Sign me up!") %>
+<% end %>
