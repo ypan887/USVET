@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161106014119) do
+ActiveRecord::Schema.define(version: 20161110014033) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -44,6 +44,16 @@ ActiveRecord::Schema.define(version: 20161106014119) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "answers", force: :cascade do |t|
+    t.string   "content"
+    t.string   "answer_type"
+    t.text     "value"
+    t.integer  "question_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
     t.string   "data_content_type"
@@ -67,6 +77,13 @@ ActiveRecord::Schema.define(version: 20161106014119) do
     t.datetime "updated_at",    null: false
     t.integer  "admin_user_id"
     t.index ["admin_user_id"], name: "index_posts_on_admin_user_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "content"
+    t.boolean  "base"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
