@@ -4,9 +4,12 @@ ActiveAdmin.register Answer do
 
   form do |f|
     f.inputs "Answer" do
+      console
       f.input :question_id, 
               :as => :select, 
-              :collection => Question.all.map{|q| [q.content, q.id]}
+              :collection => Question.all.map{|q| [q.content, q.id]},
+              :selected => params[:question_id],
+              :include_blank => false
       f.input :answer_type, :as => :select, :collection => ["Direct Link", "Download", "schedule"]
       f.input :content
       f.input :value, as: :ckeditor
