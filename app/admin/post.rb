@@ -1,4 +1,5 @@
 ActiveAdmin.register Post do
+  menu priority: 2
   permit_params :admin_user_id, :title, :content
 
   index do

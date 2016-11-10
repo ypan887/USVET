@@ -1,4 +1,5 @@
 ActiveAdmin.register Answer do
+  menu priority: 4
   permit_params :question_id, :answer_type, :content, :value
 
   form do |f|
