@@ -4,6 +4,10 @@ ActiveAdmin.register Post do
 
   index do
     selectable_column
+    n = 0
+    column :number do
+      n +=1
+    end
     column :user_name do |p| 
       p.admin_user.user_name
     end
