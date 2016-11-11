@@ -46,11 +46,13 @@ ActiveRecord::Schema.define(version: 20161110014033) do
 
   create_table "answers", force: :cascade do |t|
     t.string   "content"
-    t.string   "answer_type"
+    t.boolean  "end_question"
     t.text     "value"
+    t.integer  "next_question_id"
     t.integer  "question_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["next_question_id"], name: "index_answers_on_next_question_id"
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
