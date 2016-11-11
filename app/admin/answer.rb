@@ -15,10 +15,27 @@ ActiveAdmin.register Answer do
     column :content
     column :end_question
     column :value
-    column :question do |a|
+    column :previous_question do |a|
       a.question.content
     end
+    column :next_question do |a|
+      Question.find(a.next_question_id).content
+    end
     actions
+  end
+
+  show do
+    panel "Answer Details" do
+      attributes_table_for answer do
+        row :id
+        row :content
+        row :end_question
+        console
+        row("previous_question"){ |a| a.question.content }
+        row("next_question"){ |a| Question.find(a.next_question_id).content }
+        row :value
+      end
+    end
   end
 
   form do |f|
