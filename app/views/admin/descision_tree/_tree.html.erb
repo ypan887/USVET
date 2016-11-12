@@ -1,0 +1,11 @@
+<div class="chart" id="collapsable-QA"></div>
+<%= stylesheet_link_tag "collapsable", media: "all" %>
+<%= stylesheet_link_tag "Treant", media: "all" %>
+<%= javascript_include_tag "raphael" %>
+<%= javascript_include_tag "Treant" %>
+<%= javascript_include_tag "jquery.easing" %>
+<%= javascript_include_tag "collapsable" %>
+
+<script>
+    tree = new Treant( chart_config );
+</script>
