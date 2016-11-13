@@ -19,7 +19,7 @@ ActiveAdmin.register Answer do
       a.question.content
     end
     column :next_question do |a|
-      Question.find(a.next_question_id).content
+      Question.find(a.next_question_id).content if a.next_question_id
     end
     actions
   end
@@ -30,9 +30,10 @@ ActiveAdmin.register Answer do
         row :id
         row :content
         row :end_question
-        console
         row("previous_question"){ |a| a.question.content }
-        row("next_question"){ |a| Question.find(a.next_question_id).content }
+        if answer.next_question_id
+          row("next_question"){ |a| Question.find(a.next_question_id).content }
+        end
         row :value
       end
     end
