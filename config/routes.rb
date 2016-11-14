@@ -5,16 +5,11 @@ Rails.application.routes.draw do
 
   root "home#index"
   resources :posts, only: :show
-  resources :survey, only: [:index, :show, :create] do
-    member do
-      :end_page
-    end
-  end
+  resources :survey, only: [:index, :show, :create]
 
   get '/learn_about', to: 'home#learn_about'
   get '/volunteer', to: 'home#volunteer'
   get '/donation', to: 'home#donation'
   get '/subscribe', to: 'emailapi#index'
   post 'emailapi/subscribe', to: 'emailapi#subscribe'
-  post 'submit', to: 'survey#submit'
 end
