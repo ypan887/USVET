@@ -1,0 +1,10 @@
+<h3><%= question.content %></h3>
+<ul>
+  <% question.answers.each do |a| %>
+    <% if a.next_question_id %>
+      <li><%= button_to "#{a.content}", survey_index_path, remote: true, form_class: "btn btn-large", params: { next_question: a.next_question_id} %></li>
+    <% else %>
+      <li><%= button_to "#{a.content}", survey_path(a), form_class: "btn btn-large", :method => :get %></li>
+    <% end %>
+  <% end %>
+</ul>
