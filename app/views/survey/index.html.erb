@@ -1,3 +1,7 @@
-<div id="survey">
-  <%= render 'question_list', question: @question %> 
-</div>
+<% if @question %>
+  <div id="survey">
+    <%= render 'question_list', question: @question %> 
+  </div>
+<% else %>
+  <p>The question list is empty</p>
+<% end %>
