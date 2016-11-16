@@ -1,7 +1,6 @@
 ActiveAdmin.register Answer do
   menu priority: 4
   permit_params :question_id, 
-                :end_question, 
                 :content, 
                 :value, 
                 :next_question_id
@@ -13,10 +12,9 @@ ActiveAdmin.register Answer do
       n +=1
     end
     column :content
-    column :end_question
     column :value
     column :previous_question do |a|
-      a.question.content
+      a.question.content if a
     end
     column :next_question do |a|
       Question.find(a.next_question_id).content if a.next_question_id
@@ -29,25 +27,26 @@ ActiveAdmin.register Answer do
       attributes_table_for answer do
         row :id
         row :content
-        row :end_question
         row("previous_question"){ |a| a.question.content }
         if answer.next_question_id
           row("next_question"){ |a| Question.find(a.next_question_id).content }
+        else
+          row :value
         end
-        row :value
       end
     end
   end
 
   form do |f|
     f.inputs "Answer" do
+      f.input :selected_next, 
+              :as => :hidden, 
+              :input_html => { :value => "#{answer.next_question_id}" }
       f.input :question_id, 
               :as => :select, 
               :collection => Question.all.map{|q| [q.content, q.id]},
-              :selected => params[:question_id],
+              :selected => answer.question_id,
               :include_blank => false
-      f.input :end_question, 
-              :as => :select
       f.input :next_question_id,
               :as => :select,
               :collection => {}
