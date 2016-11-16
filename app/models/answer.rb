@@ -1,6 +1,11 @@
 class Answer < ApplicationRecord
   belongs_to :question
   belongs_to :next_question, class_name: "Question"
+  validates_presence_of :content
+  validates_presence_of :question_id
+  validates_presence_of :value, unless: :next_question_id
+  validate :question_loop
+
 
   def self.to_tree
     answers = all.includes(:question, :next_question)
@@ -27,5 +32,12 @@ class Answer < ApplicationRecord
 
   def next_question_node
     { "name" => "questions_#{next_question_id}", "parent"=>"answers_#{id}", "text"=> next_question.content }
+  end
+
+private
+  def question_loop
+    if next_question_id && (next_question_id == question_id)
+      errors.add(:next_question_id, "please choose another question to avoid infinite loop")
+    end 
   end
 end
