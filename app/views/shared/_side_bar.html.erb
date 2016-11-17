@@ -3,28 +3,28 @@
   <% @recent_posts ||= Post.recent_posts %>
   <ul class= "sidebar-widget-content">
     <% @recent_posts.each do |p| %>
-      <li><%= link_to p.title, post_path(p) %></li>
+      <% cache p do %>
+        <li><%= link_to p.title, post_path(p) %></li>
+      <% end %>
     <% end %> 
   </ul>
-</div>
-
-<div class="sidebar-widget">
-  <h2 class= "sidebar-widget-title">Recent Comments</h2>
 </div>
 
 <div class="sidebar-widget">
   <h2 class= "sidebar-widget-title">Archives</h2>
   <% @archives ||= Post.archives %>
   <ul class= "sidebar-widget-content">
-    <% @archives.each do |k, v| %>
-      <li data-toggle="collapse", data-target="#<%= k %>">
-        <%= k %>
-      </li>
-      <ul class="collapse" id="<%= k %>">
-        <% v.each do |p| %>
-          <li><%= link_to p.title, post_path(p) %></li>
-        <% end %>
-      </ul>
+    <% @archives.each do |a| %>
+      <% cache a do %>
+        <li data-toggle="collapse", data-target="#<%= a[0] %>">
+          <%= a[0] %>
+        </li>
+        <ul class="collapse" id="<%= a[0] %>">
+          <% a[1].each do |p| %>
+            <li><%= link_to p.title, post_path(p) %></li>
+          <% end %>
+        </ul>
+      <% end %>
     <% end %> 
   </ul>
 </div>
