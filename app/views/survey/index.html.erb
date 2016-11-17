@@ -1,6 +1,6 @@
 <% if @question %>
   <div id="survey">
-    <%= render 'question_list', question: @question %> 
+    <%= render 'question_list', question: @question, stack_size: @stack_size %> 
   </div>
 <% else %>
   <p>The question list is empty</p>

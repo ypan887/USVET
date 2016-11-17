@@ -8,3 +8,6 @@
     <% end %>
   <% end %>
 </ul>
+<% if stack_size > 1 %>
+  <%= button_to "Go back", survey_index_path, remote: true, form_class: "btn btn-large" %>
+<% end %>
